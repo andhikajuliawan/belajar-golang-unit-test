@@ -1,15 +1,18 @@
 package helper
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
-func TestHelloWorld(t *testing.T) {
+func TestHelloWorldAje(t *testing.T) {
 	result := helloWorld("aje")
 
 	if result != "hello aje" {
 		// error
-		panic("Result is not hello aje")
+		t.Error("Result must be 'hello aje'")
 	}
-
+	fmt.Println("TestHelloWorldAje Done")
 }
 
 func TestHelloWorldAndhika(t *testing.T) {
@@ -17,6 +20,7 @@ func TestHelloWorldAndhika(t *testing.T) {
 
 	if result != "hello andhika" {
 		// error
-		panic("Result is not hello andhika")
+		t.Fatal("Result must be 'hello andhika'")
 	}
+	fmt.Println("TestHelloWorldAndhika Done")
 }
